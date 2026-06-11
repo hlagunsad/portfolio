@@ -1,26 +1,92 @@
 @import "tailwindcss";
 
+/* Raw theme values live here so they're usable both as CSS variables
+   (in plain CSS below) and, via @theme inline, as Tailwind utilities.
+   Re-theme the whole site by editing these eight values. */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  color-scheme: light;
+
+  --bg: #f1e7d6; /* beige canvas */
+  --surface: #fbf6ec; /* lighter cream — cards */
+  --ink: #3a2a1d; /* espresso — headings */
+  --body: #5e4c3a; /* warm brown — body text */
+  --muted: #9a8775; /* taupe — meta / labels */
+  --accent: #9a5b33; /* coffee / sienna — accent */
+  --accent-strong: #7e4626; /* darker accent */
+  --line: #e3d6be; /* warm hairline border */
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-display: var(--font-fraunces);
+  --font-sans: var(--font-manrope);
+  --font-mono: var(--font-jbmono);
+
+  --color-bg: var(--bg);
+  --color-surface: var(--surface);
+  --color-ink: var(--ink);
+  --color-body: var(--body);
+  --color-muted: var(--muted);
+  --color-accent: var(--accent);
+  --color-accent-strong: var(--accent-strong);
+  --color-line: var(--line);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 5rem;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--bg);
+  color: var(--body);
+  font-family: var(--font-manrope), system-ui, -apple-system, sans-serif;
+  overflow-x: hidden;
+}
+
+::selection {
+  background: var(--accent);
+  color: #f8f1e5;
+}
+
+/* Warm atmospheric hero wash */
+.hero-mesh {
+  background:
+    radial-gradient(58% 48% at 50% -8%, rgba(154, 91, 51, 0.16), transparent 70%),
+    radial-gradient(42% 38% at 85% 6%, rgba(176, 120, 72, 0.13), transparent 70%),
+    radial-gradient(50% 42% at 8% 18%, rgba(120, 70, 38, 0.10), transparent 72%);
+}
+
+/* Faint dotted grid that fades out downward */
+.grid-dots {
+  background-image: radial-gradient(rgba(122, 79, 46, 0.12) 1px, transparent 1px);
+  background-size: 22px 22px;
+  -webkit-mask-image: linear-gradient(to bottom, black, transparent 75%);
+  mask-image: linear-gradient(to bottom, black, transparent 75%);
+}
+
+/* Staggered entrance */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.reveal {
+  opacity: 0;
+  animation: fadeUp 0.7s cubic-bezier(0.22, 0.7, 0.2, 1) forwards;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  .reveal {
+    animation: none;
+    opacity: 1;
+  }
 }
