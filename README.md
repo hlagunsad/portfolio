@@ -2,7 +2,7 @@
 
 Personal portfolio site for a full-stack / frontend engineer.
 
-**Live:** _deploying to Vercel_
+**Live:** https://portfolio-three-theta-72uldwcq7e.vercel.app
 
 ## Tech
 - Next.js 16 (App Router, Server Components) · React 19 · TypeScript
