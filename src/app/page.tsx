@@ -174,8 +174,8 @@ export default function Home() {
             ))}
           </div>
           <p className="mt-8 font-mono text-xs text-muted">
-            More open-source projects (a moderation dashboard, a serverless API,
-            an AI / RAG app) are on the way — each with live demos and tests.
+            More open-source projects (a serverless API and an AI / RAG app) are
+            on the way — each with live demos and tests.
           </p>
         </section>
 

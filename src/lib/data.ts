@@ -9,6 +9,15 @@ export type Project = {
 
 export const projects: Project[] = [
   {
+    name: "Moderation Dashboard",
+    tagline: "Trust & Safety review queue",
+    description:
+      "A moderation tool where flagged content is triaged in a queue, with role-based access (viewer / moderator / admin), an append-only audit log, and Postgres Row-Level Security enforcing permissions at the database. Built test-first with Vitest and Playwright; open source with a live demo.",
+    stack: ["Next.js", "TypeScript", "Supabase", "RLS", "Vitest", "Playwright"],
+    live: "https://moderation-dashboard-one.vercel.app",
+    liveLabel: "moderation-dashboard-one.vercel.app",
+  },
+  {
     name: "WebPros",
     tagline: "White-label video-meeting platform",
     description:
