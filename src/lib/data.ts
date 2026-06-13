@@ -9,6 +9,15 @@ export type Project = {
 
 export const projects: Project[] = [
   {
+    name: "eTNA → ILDP",
+    tagline: "Competency platform (RBAC + cycle engine)",
+    description:
+      "An organization's 3-year learning cycle: employees take an annual Training Needs Analysis, the system computes the gap to each role's target levels, and those gaps become a prioritized development plan. Four roles with scoped access and separation of duties (no one validates their own assessment or approves their own plan), enforced by Postgres Row-Level Security plus secret-key server routes. The gap/diff/readiness engine is pure and unit-tested; built test-first with Vitest + Playwright.",
+    stack: ["Next.js", "TypeScript", "Supabase", "RLS + RBAC", "Vitest", "Playwright"],
+    live: "https://training-analyzer-ten.vercel.app",
+    liveLabel: "training-analyzer-ten.vercel.app",
+  },
+  {
     name: "Live Board",
     tagline: "Real-time collaborative Kanban",
     description:
