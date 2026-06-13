@@ -9,6 +9,15 @@ export type Project = {
 
 export const projects: Project[] = [
   {
+    name: "Live Board",
+    tagline: "Real-time collaborative Kanban",
+    description:
+      "A shared Kanban board where one person's card moves appear for everyone instantly, with live presence showing who's viewing. A single Supabase Realtime channel carries Postgres Changes plus presence, and fractional/midpoint card ordering keeps every move to a single write. Built test-first with Vitest and a two-client Playwright test that proves the sync.",
+    stack: ["Next.js", "TypeScript", "Supabase Realtime", "WebSockets", "Vitest", "Playwright"],
+    live: "https://live-board-one.vercel.app",
+    liveLabel: "live-board-one.vercel.app",
+  },
+  {
     name: "Moderation Dashboard",
     tagline: "Trust & Safety review queue",
     description:
