@@ -18,6 +18,15 @@ export const projects: Project[] = [
     liveLabel: "moderation-dashboard-one.vercel.app",
   },
   {
+    name: "Subscription Starter",
+    tagline: "Auth + Stripe subscriptions",
+    description:
+      "A SaaS billing flow: sign up, subscribe via Stripe Checkout, and unlock premium content. Subscription status is written server-side only (after Stripe confirms payment), with Row-Level Security so users can't self-grant access. Built test-first with Vitest + Playwright.",
+    stack: ["Next.js", "TypeScript", "Supabase", "Stripe", "RLS", "Playwright"],
+    live: "https://subscription-starter-zeta-khaki.vercel.app",
+    liveLabel: "subscription-starter-zeta-khaki.vercel.app",
+  },
+  {
     name: "WebPros",
     tagline: "White-label video-meeting platform",
     description:
