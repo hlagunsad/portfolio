@@ -27,6 +27,15 @@ export const projects: Project[] = [
     liveLabel: "subscription-starter-zeta-khaki.vercel.app",
   },
   {
+    name: "Ask the Docs",
+    tagline: "RAG document Q&A with citations",
+    description:
+      "A retrieval-augmented Q&A app: paste a document and questions are answered grounded in the text, with citations to the exact chunks used. Chunks → embeddings → cosine top-k retrieval → grounded generation with Google Gemini. Built test-first with Vitest + Playwright.",
+    stack: ["Next.js", "TypeScript", "Gemini", "RAG", "Vitest", "Playwright"],
+    live: "https://ask-the-docs-eight.vercel.app",
+    liveLabel: "ask-the-docs-eight.vercel.app",
+  },
+  {
     name: "WebPros",
     tagline: "White-label video-meeting platform",
     description:
