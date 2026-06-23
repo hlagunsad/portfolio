@@ -9,10 +9,10 @@ export type Project = {
 
 export const projects: Project[] = [
   {
-    name: "eTNA → ILDP",
+    name: "Caliber",
     tagline: "Competency platform (RBAC + cycle engine)",
     description:
-      "An organization's 3-year learning cycle: employees take an annual Training Needs Analysis, the system computes the gap to each role's target levels, and those gaps become a prioritized development plan. Four roles with scoped access and separation of duties (no one validates their own assessment or approves their own plan), enforced by Postgres Row-Level Security plus secret-key server routes. The gap/diff/readiness engine is pure and unit-tested; built test-first with Vitest + Playwright.",
+      "An organization's 3-year learning cycle: employees take an annual Competency Assessment, the system computes the gap to each role's target levels, and those gaps become a prioritized Growth Plan. Four roles with scoped access and separation of duties (no one validates their own assessment or approves their own plan), enforced by Postgres Row-Level Security plus secret-key server routes. The gap/diff/readiness engine is pure and unit-tested; built test-first with Vitest + Playwright.",
     stack: ["Next.js", "TypeScript", "Supabase", "RLS + RBAC", "Vitest", "Playwright"],
     live: "https://training-analyzer-ten.vercel.app",
     liveLabel: "training-analyzer-ten.vercel.app",
@@ -21,8 +21,8 @@ export const projects: Project[] = [
     name: "Live Board",
     tagline: "Real-time collaborative Kanban",
     description:
-      "A shared Kanban board where one person's card moves appear for everyone instantly, with live presence showing who's viewing. A single Supabase Realtime channel carries Postgres Changes plus presence, and fractional/midpoint card ordering keeps every move to a single write. Built test-first with Vitest and a two-client Playwright test that proves the sync.",
-    stack: ["Next.js", "TypeScript", "Supabase Realtime", "WebSockets", "Vitest", "Playwright"],
+      "A members-only Kanban board: sign in, create boards you own, and invite collaborators with a link — then a card move by one member appears for the others instantly, with live presence showing who's in. A single Supabase Realtime channel carries Postgres Changes plus presence (RLS-filtered to members), and fractional/midpoint card ordering keeps every move to a single write. Built test-first with Vitest and a two-client Playwright test that proves the sync.",
+    stack: ["Next.js", "TypeScript", "Supabase Realtime", "Auth + RLS", "Vitest", "Playwright"],
     live: "https://live-board-one.vercel.app",
     liveLabel: "live-board-one.vercel.app",
   },
