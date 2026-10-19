@@ -58,7 +58,7 @@ export default function Home() {
           <div className="grid-dots absolute inset-0 -z-10" />
           <div className="mx-auto max-w-5xl px-6 pb-24 pt-40 sm:pb-32 sm:pt-48">
             <p className="reveal" style={{ animationDelay: "0.05s" }}>
-              <Eyebrow>Full-stack / Frontend Engineer</Eyebrow>
+              <Eyebrow>Full-Stack Developer</Eyebrow>
             </p>
             <h1
               className="reveal mt-6 font-display text-5xl font-semibold leading-[1.04] tracking-tight text-ink sm:text-7xl"
@@ -73,9 +73,10 @@ export default function Home() {
               style={{ animationDelay: "0.25s" }}
             >
               I build secure, scalable web apps end to end — React and
-              TypeScript on the front, Node.js and AWS behind them. Five years
-              shipping production software, most recently a live video-meeting
-              platform and government portals.
+              TypeScript on the front, Python, Node.js and AWS behind them. Five
+              years shipping production software, from a government HR system
+              with 20,000+ users to client work on video meetings, payments, and
+              clinical research data.
             </p>
             <div
               className="reveal mt-9 flex flex-wrap items-center gap-4"
@@ -174,8 +175,15 @@ export default function Home() {
             ))}
           </div>
           <p className="mt-8 font-mono text-xs text-muted">
-            More open-source projects are on the way — each with live demos and
-            tests.
+            Source for the open-source projects, with their tests, is on{" "}
+            <a
+              href={GITHUB}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="underline-offset-4 transition-colors hover:text-accent hover:underline"
+            >
+              GitHub ↗
+            </a>
           </p>
         </section>
 

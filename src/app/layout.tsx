@@ -21,13 +21,13 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Harry Lagunsad — Full-Stack / Frontend Engineer",
+  title: "Harry Lagunsad — Full-Stack Developer",
   description:
-    "Full-stack engineer with 5 years building secure, scalable web apps in React, TypeScript, Node.js and AWS.",
+    "Full-stack developer with 5 years building secure, scalable web apps in React, TypeScript, Python, Node.js and AWS.",
   openGraph: {
-    title: "Harry Lagunsad — Full-Stack / Frontend Engineer",
+    title: "Harry Lagunsad — Full-Stack Developer",
     description:
-      "Full-stack engineer building secure, scalable web apps in React, TypeScript, Node.js and AWS.",
+      "Full-stack developer building secure, scalable web apps in React, TypeScript, Python, Node.js and AWS.",
     type: "website",
   },
 };
